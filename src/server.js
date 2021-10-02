@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
   res.status(200).send('Hello world');
 });
 
-app.get('/person', validator, (req, res) => {
+app.get('/person', validator, (req, res) => {  
   res.status(200).json({ name: req.query.name});
 });
 
@@ -31,8 +31,7 @@ const start = (port) => {
   app.listen(port, () => {
     console.log(`server is running on ${port}`);
   });
-} ;
-
+};
 
 module.exports = {
   start,
